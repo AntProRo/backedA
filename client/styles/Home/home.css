@@ -1,0 +1,214 @@
+.container {
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerUser .cardUser .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2c73df;
+}
+
+.containerUser .cardUser .icon .bi {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: #fff;
+}
+
+.containerUser .cardUser .slide {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.containerUser .cardUser .slide.slide1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: 0.7s;
+  transform: translateY(100px);
+}
+
+.containerUser .cardUser:hover .slide.slide1 {
+  transform: translateY(0px);
+}
+
+.containerUser .cardUser .slide.slide2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.8s;
+  transform: translateY(-100px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.containerUser .cardUser:hover .slide.slide2 {
+  transform: translateY(0);
+}
+
+.containerUser .cardUser .slide.slide2::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  bottom: 15px;
+  left: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2c73df;
+} 
+
+
+.containerUser .cardUser .slide.slide2 .contentUser p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #414141;
+}
+
+.containerUser .cardUser .slide.slide2 .contentUser h3 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 24px;
+  text-align: center;
+  color: #414141;
+}
+
+
+.containerUser .cardUser .slide.slide2 .contentUser div {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #414141;
+  margin-top: 20px;
+}
+
+/* Search */
+
+.cardSearch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(252, 234, 222);
+  background-clip: border-box;
+  border: 2.5px solid rgba(178, 178, 178, 0.125);
+  border-radius: 0.25rem;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 15px rgb(231, 231, 231);
+  margin-top: 5rem;
+}
+
+.cardSearch:hover {
+  box-shadow: 0 0 15px rgb(152, 152, 152);
+}
+
+/* Add a new User button */
+
+
+.open_icon {
+  width:  140px;
+  height: 140px;
+  line-height: 140px;
+  border-radius: 140px;
+  border: 2px solid rgb(69, 69, 69);
+  animation: circle-bigger 640ms infinite ease-out alternate;
+  transition: all 120ms ease-out;
+  animation-delay: 640ms;
+}
+.open_icon:before {
+  content: "";
+  border-radius: 200px;
+  width: 271px;
+  height: 267px;
+  opacity: 0;
+  top: -65px;
+  left: -67px;
+  position: absolute;
+  border: 1px solid rgb(0, 0, 0);
+  margin-left: -1px;
+  margin-top: -1px;
+  animation: circle-bounce 1280ms infinite ease-out;
+  animation-delay: 1280ms;
+}
+.open_icon:after {
+  width: calc(100%);
+  height: calc(100%);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  background-color: rgb(72, 72, 72);
+  content: "";
+  border-radius: 100px;
+  opacity: 0;
+  transform: scale(2);
+  transition: all 320ms ease-out;
+}
+.open_icon svg {
+  width: 100%;
+  transform: scale(0.35);
+  fill: rgb(9, 9, 9);
+  transition: all 120ms ease-out;
+}
+.open_icon:hover {
+  animation: none;
+  background-color: rgb(0, 0, 0);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.open_icon:hover svg {
+  fill: rgb(251, 250, 250);
+  transform: scale(0.4);
+}
+.open_icon:hover:before {
+  animation: none;
+}
+.open_icon:hover:after {
+  opacity: 1;
+  z-index: -1;
+  transform: scale(1);
+}
+
+@keyframes circle-bigger {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes circle-bounce {
+  0%, 50% {
+    transform: scale(0.5);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+/* Dashboard Collaborator */
+.dahsBoardActivity {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.dahsBoardActivity div {
+  padding: 1em;
+}

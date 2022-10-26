@@ -1,0 +1,177 @@
+.isRequired {
+  margin-left: 3px;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Loader */
+
+.loader {
+  width: 100%;
+  height: 18.7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  position: absolute;
+
+  animation: spin 1s ease-in-out infinite;
+}
+
+.loader .circle:nth-child(1) {
+  border-top: 2px solid red;
+  /*   animation-duration: 1s; */
+}
+
+.loader .circle:nth-child(2) {
+  border-bottom: 2px solid orangered;
+  width: 120px;
+  height: 120px;
+  /*   animation-duration: 2s; */
+}
+
+.loader .circle:nth-child(3) {
+  border-left: 2px solid violet;
+  width: 180px;
+  height: 180px;
+  /*   animation-duration: 1s; */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+/* LOADER */
+
+/* Product File */
+.button-close {
+  margin-left: 15rem;
+}
+.imageTitle {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+  padding-top: 0.9rem;
+  position: relative;
+  text-align: left;
+  display: block;
+  transform-origin: top left;
+  margin-bottom: 0.5rem;
+  transform: translate(14px, -9px) scale(0.75);
+  -webkit-transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+    -webkit-transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+    max-width 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+    transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+    max-width 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+.upload {
+  max-width: 100%;
+  height: 375px;
+  width: 100%;
+  border: 1px solid #ddd;
+
+  margin: 1px;
+  margin-top: 1rem;
+  position: relative;
+/*   top: -20px; */
+  box-shadow: 0 0 5px rgb(131, 132, 133);
+}
+
+@media (max-width: 900px) {
+  .upload {
+    height: 270px;
+    width: 90%;
+    margin: 40px;
+    top: -20px;
+    margin-left: 10px;
+  }
+}
+
+#file_up {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  
+}
+#file_up::before {
+  content: "+";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -80px; 
+  left: 0;
+  background: white;
+  color: rgb(250, 124, 107);
+  font-size: 17rem;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+  
+}
+
+#file_Loader {
+  height: 10%;
+  width: 10%;
+}
+#file_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+ 
+}
+
+#file_img_delete {
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 80%;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-weight: 1000;
+  color: crimson;
+}
+
+@media only screen and (max-width: 900px) {
+  #file_up::before {
+    content: "+";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    background: white;
+    color: rgb(250, 124, 107);
+    font-size: 10rem;
+    text-align: center;
+    cursor: pointer;
+    margin: auto;
+  }
+
+  .imageTitle {
+    margin-bottom: -2rem;
+  }
+}
